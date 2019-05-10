@@ -1,15 +1,16 @@
-LIBRARY ieee
-use ieee.std_logic_1164;
-ENTITY registradores is 
-	port(D,clk:STD_LOGIC;
-		Q:STD_LOGIC);
-END registradores;
-ARCHITECTURE behavior of registradores is
+LIBRARY ieee;
+use ieee.std_logic_1164.all;
+ENTITY latchd is 
+	port(Dl,clkl:IN STD_LOGIC;
+		Ql:OUT STD_LOGIC);
+END latchd;
+ARCHITECTURE behavior1 of latchd is
 		begin	
-			process(clk,D)
+			process(clkl,Dl)
 				begin
-					if clk='1' then
-						Q<=D;
-					END if
+					if clkl='1' then
+						Ql<=Dl;
+					END if;
 			END process;
-END behavior;			
+END behavior1;			
+© 2019 GitHub, Inc.
